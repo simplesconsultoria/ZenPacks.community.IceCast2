@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<objects>
+<object id='/zport/dmd/Devices/rrdTemplates/IceCastMonitor' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
+    <property type="string" id="targetPythonClass" mode="w" >
+    Products.ZenModel.Device
+    </property>
+    <tomanycont id='datasources'>
+        <object id='IceCastMonitor' module='ZenPacks.community.IceCast.datasources.IceCastDataSource' class='IceCastDataSource'>
+        <property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+        IceCastMonitor
+        </property>
+        <property type="boolean" id="enabled" mode="w" >
+        True
+        </property>
+        <property type="string" id="eventClass" mode="w" >
+        /Status/Streaming
+        </property>
+        <property type="int" id="severity" mode="w" >
+        3
+        </property>
+        <property type="int" id="cycletime" mode="w" >
+        300
+        </property>
+        <property type="string" id="hostname" mode="w" >
+        ${dev/id}
+        </property>
+        <property type="string" id="ipAddress" mode="w" >
+        ${dev/manageIp}
+        </property>
+        <property type="int" id="port" mode="w" >
+        80
+        </property>
+        <property type="boolean" id="useSsl" mode="w" >
+        False
+        </property>
+        <property type="string" id="url" mode="w" >
+        /admin/stats.xml
+        </property>
+        <property type="int" id="timeout" mode="w" >
+        60
+        </property>
+        <tomanycont id='datapoints'>
+            <object id='client_connections' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='clients' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='connections' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='file_connections' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='listener_connections' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='listeners' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='source_client_connections' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='source_relay_connections' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='source_total_connections' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='sources' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='stats' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='stats_connections' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+        </tomanycont>
+        </object>
+    </tomanycont>
+</object>
+<object id='/zport/dmd/Devices/rrdTemplates/IceCastMountMonitor' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
+    <property type="string" id="targetPythonClass" mode="w" >
+    Products.ZenModel.Device
+    </property>
+    <tomanycont id='datasources'>
+        <object id='IceCastMountMonitor' module='ZenPacks.community.IceCast.datasources.IceCastDataSource' class='IceCastMountDataSource'>
+        <property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+        IceCastMountMonitor
+        </property>
+        <property type="boolean" id="enabled" mode="w" >
+        True
+        </property>
+        <property type="string" id="eventClass" mode="w" >
+        /Status/Streaming
+        </property>
+        <property type="int" id="severity" mode="w" >
+        3
+        </property>
+        <property type="int" id="cycletime" mode="w" >
+        300
+        </property>
+        <property type="string" id="hostname" mode="w" >
+        ${dev/id}
+        </property>
+        <property type="string" id="ipAddress" mode="w" >
+        ${dev/manageIp}
+        </property>
+        <property type="int" id="port" mode="w" >
+        80
+        </property>
+        <property type="boolean" id="useSsl" mode="w" >
+        False
+        </property>
+        <property type="string" id="url" mode="w" >
+        /admin/stats.xml
+        </property>
+        <property type="string" id="mount" mode="w" >
+        </property>
+        <property type="int" id="timeout" mode="w" >
+        60
+        </property>
+        <tomanycont id='datapoints'>
+            <object id='listeners' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='slow_listners' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='total_bytes_read' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='total_bytes_sent' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+
+            <object id='listener_peak' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+                <property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+                COUNTER
+                </property>
+                <property type="boolean" id="isrow" mode="w" >
+                True
+                </property>
+            </object>
+            
+        </tomanycont>
+        </object>
+    </tomanycont>
+</object>
+<!-- ('', 'zport', 'dmd', 'Events', 'Status', 'Streaming') -->
+<object id='/zport/dmd/Events/Status/Streaming' module='Products.ZenEvents.EventClass' class='EventClass'>
+</object>
+</objects>

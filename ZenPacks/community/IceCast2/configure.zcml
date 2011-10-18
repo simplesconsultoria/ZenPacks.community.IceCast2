@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <adapter factory=".info.IceCastDataSourceInfo"
+           for=".datasources.IceCastDataSource.IceCastDataSource"
+           provides=".interfaces.IIceCastDataSourceInfo"
+           />
+
+  <adapter factory=".info.IceCastMountDataSourceInfo"
+           for=".datasources.IceCastDataSource.IceCastMountDataSource"
+           provides=".interfaces.IIceCastMountDataSourceInfo"
+           />
+
+</configure>
