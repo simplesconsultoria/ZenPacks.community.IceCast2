@@ -72,7 +72,7 @@ class IceCastDataSource(ZenPackPersistence, RRDDataSource.RRDDataSource):
         RRDDataSource.RRDDataSource.__init__(self, id, title, buildRelations)
 
     def getDescription(self):
-        if self.sourcetype == self.VARNISH_MONITOR:
+        if self.sourcetype == self.MONITOR:
             return self.ipAddress + self.url
         return RRDDataSource.RRDDataSource.getDescription(self)
 
