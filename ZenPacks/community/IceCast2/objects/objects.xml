@@ -5,7 +5,7 @@
     Products.ZenModel.Device
     </property>
     <tomanycont id='datasources'>
-        <object id='IceCastMonitor' module='ZenPacks.community.IceCast.datasources.IceCastDataSource' class='IceCastDataSource'>
+        <object id='IceCastMonitor' module='ZenPacks.community.IceCast2.datasources.IceCastDataSource' class='IceCastDataSource'>
         <property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
         IceCastMonitor
         </property>
@@ -156,7 +156,7 @@
     Products.ZenModel.Device
     </property>
     <tomanycont id='datasources'>
-        <object id='IceCastMountMonitor' module='ZenPacks.community.IceCast.datasources.IceCastDataSource' class='IceCastMountDataSource'>
+        <object id='IceCastMountMonitor' module='ZenPacks.community.IceCast2.datasources.IceCastDataSource' class='IceCastMountDataSource'>
         <property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
         IceCastMountMonitor
         </property>

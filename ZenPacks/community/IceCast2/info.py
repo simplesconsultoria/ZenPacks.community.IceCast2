@@ -2,8 +2,8 @@
 from zope.interface import implements
 from Products.Zuul.infos import ProxyProperty
 from Products.Zuul.infos.template import RRDDataSourceInfo
-from ZenPacks.community.IceCast.interfaces import IIceCastDataSourceInfo
-from ZenPacks.community.IceCast.interfaces import IIceCastMountDataSourceInfo
+from ZenPacks.community.IceCast2.interfaces import IIceCastDataSourceInfo
+from ZenPacks.community.IceCast2.interfaces import IIceCastMountDataSourceInfo
 
 
 class IceCastDataSourceInfo(RRDDataSourceInfo):
