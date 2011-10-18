@@ -26,6 +26,6 @@ class IceCastDataSourceInfo(RRDDataSourceInfo):
         return False
 
 
-class IceCastMountDataSourceInfo(IIceCastDataSourceInfo):
+class IceCastMountDataSourceInfo(IceCastDataSourceInfo):
     implements(IIceCastMountDataSourceInfo)
     mount = ProxyProperty('mount')
