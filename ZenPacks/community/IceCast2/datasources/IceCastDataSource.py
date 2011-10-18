@@ -53,7 +53,7 @@ class IceCastDataSource(ZenPackPersistence, RRDDataSource.RRDDataSource):
     },
     )
     
-    datapoints = ['client_connections',
+    DATAPOINTS = ['client_connections',
                   'clients',
                   'connections',
                   'file_connections',
@@ -103,7 +103,7 @@ class IceCastDataSource(ZenPackPersistence, RRDDataSource.RRDDataSource):
         return cmd
 
     def addDataPoints(self):
-        for datapoint in self.datapoints:
+        for datapoint in self.DATAPOINTS:
             if not self.datapoints._getOb(datapoint, None):
                 self.manage_addRRDDataPoint(datapoint)
 
@@ -154,7 +154,7 @@ class IceCastMountDataSource(IceCastDataSource):
     },
     )
 
-    datapoints = ['listeners',
+    DATAPOINTS = ['listeners',
                   'slow_listners',
                   'total_bytes_read',
                   'total_bytes_sent',
